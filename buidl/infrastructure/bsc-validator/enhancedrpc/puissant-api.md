@@ -11,7 +11,6 @@ Override of original eth\_gasPrice endpoint.
 重載標準eth\_gasPrice 接口.
 
 查詢Puissant服務接受的最低GasPrice要求. 發送到Puissant服務的Tx如果GasPrice低於此要求會被拒絕.
-
 {% endswagger-description %}
 
 {% swagger-parameter in="header" name="Content-Type" type="String" required="true" %}
@@ -46,7 +45,6 @@ Override of original eth\_gasPrice endpoint.
 提交隱私交易。
 
 所有通過此服務提交的tx僅會被BNB48驗證節點打包，且被打包前不會對外廣播。
-
 {% endswagger-description %}
 
 {% swagger-parameter in="header" name="Content-Type" type="String" required="true" %}
@@ -79,7 +77,7 @@ Signed transaction (eth_sendRawTransaction style, signed and RLP-encoded)
 ```
 {% endswagger-response %}
 
-{% swagger-response status="400: Bad Request" description="Fail" %}
+{% swagger-response status="200: OK" description="Fail" %}
 ```javascript
 {
     "id": 1,
@@ -98,13 +96,13 @@ Bundle被打包時，其中交易會按照發送時的順序被打包，但僅�
 
 Bundle中所有交易的平均gasPrice必須滿足最低GasPrice要求。注意計算平均gasPrice時，所有gasPrice大於最低gasPrice要求的tx其gasLimit一律按照21000計算。詳細計算公式如下：
 
-$$average\ gasPrice = \frac{\sum(gasPrice_i \times e\_gasLimit_i)}{\sum(e\_gasLimit_i)}$$
+$$\begin{equation} average\_gasPrice = \frac{\sum(gasPrice_i \times e\_gasLimit_i)}{\sum(e\_gasLimit_i)} \end{equation}$$
 
 其中
 
 The trust-relay bundle has the higher priority than the normal bundle.
 
-$$\begin{equation} e\_gasLimit_i= \left\{  \begin{aligned} gasLimit_i\qquad 當\quad gasPrice_i \le gasPriceFloor   \\ 21000\qquad 當\quad gasPrice_i \gt gasPriceFloor   \\ \end{aligned} \right. \end{equation}$$
+$$\begin{equation} e\_gasLimit_i= \left\{ \begin{aligned} gasLimit_i\qquad 當\quad gasPrice_i \le gasPriceFloor \\ 21000\qquad 當\quad gasPrice_i \gt gasPriceFloor \\ \end{aligned} \right. \end{equation}$$
 
 發生競爭時，平均gasPrice更高者優先。
 {% endswagger-description %}
@@ -147,7 +145,7 @@ The array of hash indicated which transaction(s) are allowed to revert
 ```
 {% endswagger-response %}
 
-{% swagger-response status="400: Bad Request" description="Fail" %}
+{% swagger-response status="200: OK" description="Fail" %}
 ```javascript
 {
     "jsonrpc":"2.0",
