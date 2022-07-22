@@ -38,6 +38,6 @@ Testnet: `https://testnet-fonce-bsc.bnb48.club`
 
 必須通過程序調用，不適用於普通錢包。
 
-接口規範參見[puissant-api.md](puissant-api.md "mention")
+接口規範參見[api-reference.md](api-reference.md "mention")
 
 </details>

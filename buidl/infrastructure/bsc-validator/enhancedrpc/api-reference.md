@@ -102,7 +102,7 @@ $$\begin{equation} average\_gasPrice = \frac{\sum(gasPrice_i \times e\_gasLimit_
 
 The trust-relay bundle has the higher priority than the normal bundle.
 
-$$\begin{equation} e\_gasLimit_i= \left\{ \begin{aligned} gasLimit_i\qquad 當\quad gasPrice_i \le gasPriceFloor \\ 21000\qquad 當\quad gasPrice_i \gt gasPriceFloor \\ \end{aligned} \right. \end{equation}$$
+$$\begin{equation} e\_gasLimit_i= \left\{  \begin{aligned} gasLimit_i\qquad if\quad gasPrice_i \le gasPriceFloor   \\ min(21000,gasLimit_i)\qquad if\quad gasPrice_i \gt gasPriceFloor   \\ \end{aligned} \right. \end{equation}$$
 
 發生競爭時，平均gasPrice更高者優先。
 {% endswagger-description %}
