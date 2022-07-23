@@ -67,7 +67,7 @@ Override of original eth\_gasPrice endpoint.
 Signed transaction (eth_sendRawTransaction style, signed and RLP-encoded)
 {% endswagger-parameter %}
 
-{% swagger-response status="200: OK" description="Success" %}
+{% swagger-response status="200: OK" description="成功" %}
 ```javascript
 {
     "id": 1,
@@ -77,7 +77,7 @@ Signed transaction (eth_sendRawTransaction style, signed and RLP-encoded)
 ```
 {% endswagger-response %}
 
-{% swagger-response status="200: OK" description="Fail" %}
+{% swagger-response status="200: OK" description="失敗" %}
 ```javascript
 {
     "id": 1,
@@ -88,19 +88,17 @@ Signed transaction (eth_sendRawTransaction style, signed and RLP-encoded)
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger method="post" path="/" baseUrl="" summary="發送捆綁交易" %}
+{% swagger method="post" path="/" baseUrl="" summary="發送Puissant" %}
 {% swagger-description %}
-發送一組捆綁交易，即Bundle。
+發送一組交易，即Puissant。
 
-Bundle被打包時，其中交易會按照發送時的順序被打包，但僅其中gasPrice完全相同的交易保證position連續。
+Puissant被打包時，其中交易會按照發送時的順序被打包，但僅其中gasPrice完全相同的交易保證position連續。
 
-Bundle中所有交易的平均gasPrice必須滿足最低GasPrice要求。注意計算平均gasPrice時，所有gasPrice大於最低gasPrice要求的tx其gasLimit一律按照21000計算。詳細計算公式如下：
+Puissant中所有交易的平均gasPrice必須滿足最低GasPrice要求。注意計算平均gasPrice時，所有gasPrice大於最低gasPrice要求的tx其gasLimit一律按照21000計算。詳細計算公式如下：
 
 $$\begin{equation} average\_gasPrice = \frac{\sum(gasPrice_i \times e\_gasLimit_i)}{\sum(e\_gasLimit_i)} \end{equation}$$
 
 其中
-
-The trust-relay bundle has the higher priority than the normal bundle.
 
 $$\begin{equation} e\_gasLimit_i= \left\{  \begin{aligned} gasLimit_i\qquad if\quad gasPrice_i \le gasPriceFloor   \\ min(21000,gasLimit_i)\qquad if\quad gasPrice_i \gt gasPriceFloor   \\ \end{aligned} \right. \end{equation}$$
 
@@ -124,15 +122,15 @@ $$\begin{equation} e\_gasLimit_i= \left\{  \begin{aligned} gasLimit_i\qquad if\q
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="params[0].txs" type="[]Tx" required="true" %}
-Signed transactions (eth_sendRawTransaction style, signed and RLP-encoded)
+簽名交易。(與eth_sendRawTransaction 接口參數要求一致, signed and RLP-encoded)
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="params[0].maxTimestamp" type="uint64" required="true" %}
-bundle valid until timestamp reaches. No more than 2 minutes from now
+Puissant 有效時間，過期後將不被打包. 需在請求時間兩分鐘內。
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="params[0].acceptReverting" type="[]TxHash" required="false" %}
-The array of hash indicated which transaction(s) are allowed to revert
+可接受revert的交易hash。與默認行為不同，這些交易revert將不會撤回整個puissant。
 {% endswagger-parameter %}
 
 {% swagger-response status="200: OK" description="Success" %}
