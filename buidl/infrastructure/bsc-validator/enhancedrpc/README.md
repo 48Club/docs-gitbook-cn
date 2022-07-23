@@ -34,7 +34,7 @@ Testnet: `https://testnet-fonce-bsc.bnb48.club`
 
 `https://testnet-puissant-bsc.bnb48.club // testnet`
 
-保持gasPrice優先排序的前提下，提供Group交易服務。
+保持gasPrice優先排序的前提下，提供捆綁交易服務。
 
 必須通過程序調用，不適用於普通錢包。
 
