@@ -92,19 +92,15 @@ Signed transaction (eth_sendRawTransaction style, signed and RLP-encoded)
 {% swagger-description %}
 發送一組交易，即Puissant。
 
-Puissant被打包時，其中交易會按照發送時的順序被打包，但僅其中gasPrice完全相同的交易保證position連續。
+Puissant中的交易必須按照gasPrice降序排列。tx最終在block中的打包順序與在Puissant中排列順序一致，但僅保證gasPrice完全相同的交易連續。
 
-Puissant中所有交易的平均gasPrice必須滿足最低GasPrice要求。注意計算平均gasPrice時，所有gasPrice大於最低gasPrice要求的tx其gasLimit一律按照21000計算。詳細計算公式如下：
-
-$$\begin{equation} average\_gasPrice = \frac{\sum(gasPrice_i \times e\_gasLimit_i)}{\sum(e\_gasLimit_i)} \end{equation}$$
-
-其中
-
-$$\begin{equation} e\_gasLimit_i= \left\{  \begin{aligned} gasLimit_i\qquad if\quad gasPrice_i \le gasPriceFloor   \\ min(21000,gasLimit_i)\qquad if\quad gasPrice_i \gt gasPriceFloor   \\ \end{aligned} \right. \end{equation}$$
+Puissant中首個tx的gasPrice必須滿足[#cha-xun-zui-di-gasprice-yao-qiu](api-reference.md#cha-xun-zui-di-gasprice-yao-qiu "mention")。
 
 若首個tx使用gas不足21000，整個Puissant會被撤回。
 
-發生競爭時，平均gasPrice更高者優先。
+發生競爭時，首個tx gasPrice更高者優先。
+
+若多個Puissant的首個tx來自同一個sender，則僅保留該sender gas Price最高的tx所在的Puissant，其餘丟棄。
 {% endswagger-description %}
 
 {% swagger-parameter in="body" name="id" required="true" type="uint64" %}
