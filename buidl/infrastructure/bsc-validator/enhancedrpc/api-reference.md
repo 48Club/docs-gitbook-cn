@@ -90,17 +90,33 @@ Signed transaction (eth_sendRawTransaction style, signed and RLP-encoded)
 
 {% swagger method="post" path="/" baseUrl="" summary="發送Puissant" %}
 {% swagger-description %}
-發送一組交易，即Puissant。
+一次發送一組tx，即Puissant。
 
-Puissant中的交易必須按照gasPrice降序排列。tx最終在block中的打包順序與在Puissant中排列順序一致，但僅保證gasPrice完全相同的交易連續。
+Puissant中的tx必須按照gasPrice降序排列。Puissant中首個tx的gasPrice必須滿足[#cha-xun-zui-di-gasprice-yao-qiu](api-reference.md#cha-xun-zui-di-gasprice-yao-qiu "mention")，且GasLimit必须至少为21000，否则请求立刻失败。
 
-Puissant中首個tx的gasPrice必須滿足[#cha-xun-zui-di-gasprice-yao-qiu](api-reference.md#cha-xun-zui-di-gasprice-yao-qiu "mention")。
+若发生以下情时，puissant中所有交易均被丢弃。否则puissant中所有交易按顺序被打包进下一个出块。
 
-若首個tx使用gas不足21000，整個Puissant會被撤回。
+**CASE EXPIRED**
 
-發生競爭時，首個tx gasPrice更高者優先。
+当前时间已经超过puissant请求时携带的`maxTimestamp`参数，或者puissant中的任一tx已经被其他块打包，则puissant失效。
 
-若多個Puissant的首個tx來自同一個sender，則僅保留該sender gas Price最高的tx所在的Puissant，其餘丟棄。
+**CASE INVALID**
+
+尝试打包puissant首个tx时gasUsed不足21000，则认为puissant由于付款组不足无效。
+
+**CASE REVERTED**
+
+打包Puissant中任一tx失败(reverted，无论具体原因如何)，且该txHash不在puissant请求的acceptReverting参数中出现，则认为puissant整体执行失败。
+
+**CASE BEATEN**
+
+多个Puissant包含同个tx时，优先服务首个tx gasPrice最高的puissant，其他puissant竞价失败。
+
+
+
+puissant中gasPrice完全一致的tx，打包时会按顺序在区块中连续的位置。gasPrice不同的tx则不保证。
+
+若多個Puissant的首個tx來自同一個sender，视作对puissant发动攻击，僅保留該sender gas Price最高的tx所在的Puissant，其餘忽略。
 {% endswagger-description %}
 
 {% swagger-parameter in="body" name="id" required="true" type="uint64" %}
