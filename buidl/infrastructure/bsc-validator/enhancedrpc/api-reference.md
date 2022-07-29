@@ -94,7 +94,7 @@ Signed transaction (eth_sendRawTransaction style, signed and RLP-encoded)
 
 Puissant中的tx必須按照gasPrice降序排列。Puissant中首個tx的gasPrice必須滿足[#cha-xun-zui-di-gasprice-yao-qiu](api-reference.md#cha-xun-zui-di-gasprice-yao-qiu "mention")，且GasLimit必须至少为21000，否则请求立刻失败。
 
-若发生以下情时，puissant中所有交易均被丢弃。否则puissant中所有交易按顺序被打包进下一个由我们的验证节点出的块。
+若发生以下情形，puissant中所有交易均被丢弃。否则puissant中所有交易按顺序被打包进下一个由我们的验证节点出的块。
 
 **CASE EXPIRED**
 
