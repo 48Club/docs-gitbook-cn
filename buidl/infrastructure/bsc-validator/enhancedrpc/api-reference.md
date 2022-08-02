@@ -116,7 +116,7 @@ Puissant中的tx必須按照gasPrice降序排列。Puissant中首個tx的gasPric
 
 puissant中gasPrice完全一致的tx，打包时会按顺序在区块中连续的位置。gasPrice不同的tx则不保证。
 
-若多個Puissant的首個tx來自同一個sender，视作对puissant发动攻击，僅保留該sender gas Price最高的tx所在的Puissant，其餘忽略。
+若多個Puissant的首個tx來自同一個sender，彼此互相冲突，僅保留該sender gas Price最高的tx所在的Puissant，其餘忽略。
 {% endswagger-description %}
 
 {% swagger-parameter in="body" name="id" required="true" type="uint64" %}
