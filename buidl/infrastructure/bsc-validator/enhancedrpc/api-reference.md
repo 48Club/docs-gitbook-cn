@@ -4,7 +4,7 @@ description: 按照標準RPC接口風格設計
 
 # Puissant API
 
-{% swagger method="post" path="/" baseUrl="" summary="查詢最低GasPrice要求" %}
+{% swagger method="post" path="/" baseUrl="https://puissant-bsc.bnb48.club" summary="查詢最低GasPrice要求" %}
 {% swagger-description %}
 Override of original eth\_gasPrice endpoint.
 
@@ -40,7 +40,7 @@ Override of original eth\_gasPrice endpoint.
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger method="post" path="/" baseUrl="" summary="發送隱私交易" %}
+{% swagger method="post" path="/" baseUrl="https://puissant-bsc.bnb48.club" summary="發送隱私交易" %}
 {% swagger-description %}
 提交隱私交易。
 
@@ -88,7 +88,7 @@ Signed transaction (eth_sendRawTransaction style, signed and RLP-encoded)
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger method="post" path="/" baseUrl="" summary="發送Puissant" %}
+{% swagger method="post" path="/" baseUrl="https://puissant-bsc.bnb48.club" summary="發送Puissant" %}
 {% swagger-description %}
 一次發送一組tx，即Puissant。
 
@@ -152,7 +152,7 @@ Puissant 有效時間，過期後將不被打包. 需在請求時間兩分鐘內
 {
     "jsonrpc":"2.0",
     "id":1,
-    "result":"a77f8997-0fc1-4d42-94b2-09d4f79c667d"
+    "result":"a77f8997-0fc1-4d42-94b2-09d4f79c667d" // uuid
 }
 ```
 {% endswagger-response %}
@@ -166,6 +166,115 @@ Puissant 有效時間，過期後將不被打包. 需在請求時間兩分鐘內
         "code":-32000,
         "message":"known sender"
     }
+}
+```
+{% endswagger-response %}
+{% endswagger %}
+
+{% swagger method="get" path="/api/v1/ping" baseUrl="https://explorer.bnb48.club" summary="查詢 puissant api 在綫狀態" %}
+{% swagger-description %}
+
+{% endswagger-description %}
+
+{% swagger-response status="200: OK" description="" %}
+```javascript
+{
+    "message":"pong",
+    "status":200
+}
+```
+{% endswagger-response %}
+{% endswagger %}
+
+{% swagger method="get" path="/api/v1/puissant/:uuid" baseUrl="https://explorer.bnb48.club" summary="查詢 puissant 交易狀態" %}
+{% swagger-description %}
+
+{% endswagger-description %}
+
+{% swagger-response status="200: OK" description="" %}
+```javascript
+{
+    "message":"",
+    "status":200,
+    "value":{
+        "uuid":":uuid",
+        "block":"",
+        "validator":"",
+        "status":"Pending in puissant queue.",
+        "info":"OK.",
+        "txs":[
+            {
+                "tx_hash":"tx_hash",
+                "status":"innocent noRun",
+                "accept_revert":false,
+                "created":"2022-08-02T21:43:53+08:00"
+            },
+            {
+                "tx_hash":"tx_hash",
+                "status":"innocent noRun",
+                "accept_revert":false,
+                "created":"2022-08-02T21:43:53+08:00"
+            }
+        ],
+        "created":"2022-08-02T21:43:53+08:00"
+    }
+}
+```
+{% endswagger-response %}
+
+{% swagger-response status="404: Not Found" description="" %}
+```javascript
+{
+    "message":"tx not found",
+    "status":404
+}
+```
+{% endswagger-response %}
+
+{% swagger-response status="500: Internal Server Error" description="" %}
+```javascript
+{
+    "message":"error info",
+    "status":500
+}
+```
+{% endswagger-response %}
+{% endswagger %}
+
+{% swagger method="get" path="/api/v1/tx/:tx_hash" baseUrl="https://explorer.bnb48.club" summary="查詢 tx 狀態" %}
+{% swagger-description %}
+
+{% endswagger-description %}
+
+{% swagger-response status="200: OK" description="" %}
+```javascript
+{
+    "message":"",
+    "status":200,
+    "value":{
+        "tx_hash":"tx_hash",
+        "status":"innocent noRun",
+        "accept_revert":false,
+        "created":"2022-08-02T21:43:53+08:00"
+    }
+}
+```
+{% endswagger-response %}
+
+{% swagger-response status="404: Not Found" description="" %}
+```javascript
+{
+    "message":"tx not found",
+    "status":404
+}
+```
+{% endswagger-response %}
+
+{% swagger-response status="500: Internal Server Error" description="" %}
+```javascript
+{
+    "message":"error info",
+    "status":500
 }
 ```
 {% endswagger-response %}
