@@ -241,7 +241,7 @@ Puissant 有效時間，過期後將不被打包. 需在請求時間兩分鐘內
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger method="get" path="/api/v1/tx/:tx_hash" baseUrl="https://explorer.bnb48.club" summary="查詢 tx 狀態" %}
+{% swagger method="get" path="/api/v1/puissant/tx/:tx_hash" baseUrl="https://explorer.bnb48.club" summary="查詢包含在 puissant 內的 tx 狀態" %}
 {% swagger-description %}
 
 {% endswagger-description %}
