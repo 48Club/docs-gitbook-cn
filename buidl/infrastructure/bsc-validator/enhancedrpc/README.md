@@ -4,6 +4,8 @@ description: 'Foncé: [法文] 黑暗。 Puissant: [法文] 強力的。'
 
 # 進階RPC服務
 
+本服务为链下服务，不会隐藏用户访问足迹（包括但不限于IP地址）。
+
 <details>
 
 <summary>適用於終端用戶的Foncé服務</summary>
@@ -34,7 +36,7 @@ Testnet: `https://testnet-fonce-bsc.bnb48.club`
 
 `https://testnet-puissant-bsc.bnb48.club // testnet`
 
-保持gasPrice優先排序的前提下，提供捆綁交易服務。
+保持gasPrice優先排序的前提下，提供Group交易服務。
 
 必須通過程序調用，不適用於普通錢包。
 
