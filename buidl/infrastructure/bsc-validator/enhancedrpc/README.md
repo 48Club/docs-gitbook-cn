@@ -24,7 +24,7 @@ Testnet: `https://testnet-fonce-bsc.bnb48.club`
 #### 缺點:&#x20;
 
 1. 需要等待BNB48驗證節點打包出塊，確認速度會略慢。
-2. 有最低gasprice要求，目前為15gwei。可以通過 eth\_gasPrice 查詢
+2. 有最低gasprice要求，目前為60gwei。可以通過 eth\_gasPrice 查詢
 
 </details>
 
@@ -43,3 +43,5 @@ Testnet: `https://testnet-fonce-bsc.bnb48.club`
 接口規範參見[api-reference.md](api-reference.md "mention")
 
 </details>
+
+Bug追踪 [https://github.com/BNB48Club/puissant\_service](https://github.com/BNB48Club/puissant\_service)
