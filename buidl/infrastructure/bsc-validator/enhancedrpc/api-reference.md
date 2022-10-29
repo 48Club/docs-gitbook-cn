@@ -10,7 +10,7 @@ Override of original eth\_gasPrice endpoint.
 
 重載標準eth\_gasPrice 接口.
 
-查詢Puissant服務接受的最低GasPrice要求. 發送到Puissant服務的Tx如果GasPrice低於此要求會被拒絕.
+查詢Puissant服務(也适用于Foncé)接受的最低GasPrice要求. 發送到Puissant服務的Tx如果GasPrice低於此要求會被拒絕.
 {% endswagger-description %}
 
 {% swagger-parameter in="header" name="Content-Type" type="String" required="true" %}
@@ -44,7 +44,7 @@ Override of original eth\_gasPrice endpoint.
 {% swagger-description %}
 提交隱私交易。
 
-所有通過此服務提交的tx僅會被BNB48驗證節點打包，且被打包前不會對外廣播。
+所有通過此服務提交的tx僅會被BNB48与合作驗證節點打包，且被打包前不會對外廣播。
 {% endswagger-description %}
 
 {% swagger-parameter in="header" name="Content-Type" type="String" required="true" %}
@@ -94,7 +94,7 @@ Signed transaction (eth_sendRawTransaction style, signed and RLP-encoded)
 
 Puissant中的tx必須按照gasPrice降序排列。Puissant中首個tx的gasPrice必須滿足[#cha-xun-zui-di-gasprice-yao-qiu](api-reference.md#cha-xun-zui-di-gasprice-yao-qiu "mention")，且GasLimit必须至少为21000，否则请求立刻失败。
 
-若发生以下情形，puissant中所有交易均被丢弃。否则puissant中所有交易按顺序被打包进下一个由我们的验证节点出的块。
+若发生以下情形，puissant中所有交易均被丢弃。否则puissant中所有交易按顺序被打包进下一个由BNB48或合作验证节点出的块。
 
 **CASE EXPIRED**
 
