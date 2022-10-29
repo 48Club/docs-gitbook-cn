@@ -14,7 +14,7 @@ description: 'Foncé: [法文] 黑暗。 Puissant: [法文] 強力的。'
 
 <summary>koge-rpc-bsc, 向KOGE持有者提供gas费折扣</summary>
 
-持有 $KOGE 即享GAS费折扣 ！
+持有 [$KOGE](https://bscscan.com/token/0xe6df05ce8c8301223373cf5b969afcb1498c5528) 即享GAS费折扣 ！
 
 满足以下条件：&#x20;
 
@@ -74,5 +74,3 @@ Puissant 服务可以一次接收一组tx，并在保持gasPrice優先排序的�
 接口規範參見[api-reference.md](api-reference.md "mention")
 
 </details>
-
-Bug追踪 [https://github.com/BNB48Club/puissant\_service](https://github.com/BNB48Club/puissant\_service)
