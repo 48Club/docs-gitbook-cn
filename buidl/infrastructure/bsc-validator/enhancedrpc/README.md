@@ -14,7 +14,7 @@ description: 'Foncé: [法文] 黑暗。 Puissant: [法文] 強力的。'
 
 <summary>koge-rpc-bsc, 向KOGE持有者提供gas费折扣</summary>
 
-持有 [$KOGE](https://bscscan.com/token/0xe6df05ce8c8301223373cf5b969afcb1498c5528) 即享GAS费折扣 ！
+持有 1 [$KOGE](https://bscscan.com/token/0xe6df05ce8c8301223373cf5b969afcb1498c5528) 即享GAS费折扣 ！
 
 满足以下条件：&#x20;
 
@@ -29,11 +29,11 @@ description: 'Foncé: [法文] 黑暗。 Puissant: [法文] 強力的。'
 
 **KOGE持仓与gas折扣的关系：**
 
-* 持有Koge但不超过100，可以1gwei(即比原价5gwei优惠80%)发送gasLimit不超过24万的交易，也可以选择3gwei(即比原价5gwei优惠40%)发送gasLimit不超过48万的交易。即总优惠量不变，优惠越多，允许的gasLimit越小；优惠较少，就可以允许更大的gasLimit。
+* 持有至少1 Koge但不超过100，可以1gwei(即比原价5gwei优惠80%)发送gasLimit不超过24万的交易，也可以选择3gwei(即比原价5gwei优惠40%)发送gasLimit不超过48万的交易。即总优惠量不变，优惠越多，允许的gasLimit越小；优惠较少，就可以允许更大的gasLimit。
 
 <!---->
 
-* Koge持仓扩大10倍，允许的优惠翻倍。例如持有1000Koge，可以1gwei发送gasLimit不超过48万的交易；持有10000Koge，可以1gwei发送gasLimit不超过96万的交易。
+* Koge持仓每扩大10倍，允许的优惠翻倍。例如持有1000Koge，可以1gwei发送gasLimit不超过48万的交易；持有10000Koge，可以1gwei发送gasLimit不超过96万的交易。
 
 </details>
 

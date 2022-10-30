@@ -5,6 +5,7 @@ BNB48 是BNB Smart Chain上最早的社區驗證節點。[質押給BNB48](https:
 我們同時提供BNB Smart Chain RPC服務：
 
 ```
-https://rpc-bsc.bnb48.club
+https://rpc-bsc.bnb48.club \\ mainnet
 wss://rpc-bsc.bnb48.club
+https://testnet-rpc-bsc.bnb48.club \\testnet
 ```
