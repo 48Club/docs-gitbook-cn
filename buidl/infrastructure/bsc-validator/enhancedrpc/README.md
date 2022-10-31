@@ -14,26 +14,20 @@ description: 'Foncé: [法文] 黑暗。 Puissant: [法文] 強力的。'
 
 <summary>koge-rpc-bsc, 向KOGE持有者提供gas费折扣</summary>
 
-持有 1 [$KOGE](https://bscscan.com/token/0xe6df05ce8c8301223373cf5b969afcb1498c5528) 即享GAS费折扣 ！
+持有 [$KOGE](https://bscscan.com/token/0xe6df05ce8c8301223373cf5b969afcb1498c5528) 即享GAS费折扣 ！
 
 满足以下条件：&#x20;
 
-1. 发起交易的钱包地址持有KOGE余额。
+1. 发起交易的钱包地址持有[48er-nft.md](../../../../dao/governance/voting/48er-nft.md "mention")或至少1 KOGE余额。
 2. 使用 RPC地址 [http://koge-rpc-bsc.bnb48.club](https://t.co/5859ob3MhI)&#x20;
 
-即可以优惠价格发送BSC交易！持有KOGE数量越多，可享受的折扣越多。
+即可以最低1gwei的优惠价格发送BSC交易！
 
-请注意最低1gwei的gasPrice是有条件的，如果发送的tx消耗过多的gas，所需要的gasPrice可能会高于1gwei 。遇到这种情况时，RPC服务会在报错信息中包含推荐的gasPrice，以此重新设置后再发送交易即可。
+请注意最低1gwei的gasPrice是有条件的，所發送的交易gasLimit越多，要求持有KOGE数量越多(持有48er NFT者發出的交易不對gasLimit做限制)。
 
-另外，并不是所有的验证节点都接收低于5gwei的交易（BNB48及合作伙伴支持），所以较低gas的交易打包可能会稍慢，这是正常现象。
+當您發送的交易超過您可以享受的優惠幅度，可以選擇提高gasPrice，或者持倉更多的KOGE。RPC服务会在报错信息中給出所能接受最低的gasPrice，通常參考重新设置后再发送交易即可。
 
-**KOGE持仓与gas折扣的关系：**
-
-* 持有至少1 Koge但不超过100，可以1gwei(即比原价5gwei优惠80%)发送gasLimit不超过24万的交易，也可以选择3gwei(即比原价5gwei优惠40%)发送gasLimit不超过48万的交易。即总优惠量不变，优惠越多，允许的gasLimit越小；优惠较少，就可以允许更大的gasLimit。
-
-<!---->
-
-* Koge持仓每扩大10倍，允许的优惠翻倍。例如持有1000Koge，可以1gwei发送gasLimit不超过48万的交易；持有10000Koge，可以1gwei发送gasLimit不超过96万的交易。
+由於並非所有的验证节点都接收低于5gwei的交易（BNB48及合作伙伴支持），所以较低gas的交易打包可能会稍慢，这是正常现象。
 
 </details>
 
