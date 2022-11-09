@@ -35,9 +35,7 @@ description: 'Foncé: [法文] 黑暗。 Puissant: [法文] 強力的。'
 
 <summary>fonce-bsc, 適用於普通用戶的隐私交易服務</summary>
 
-Mainnet: `https://fonce-bsc.bnb48.club`
-
-Testnet: `https://testnet-fonce-bsc.bnb48.club`
+`https://fonce-bsc.bnb48.club`
 
 所有通過此服務提交的tx僅會被BNB48及合作驗證節點打包，且被打包前不會對外廣播。
 
@@ -57,14 +55,12 @@ Testnet: `https://testnet-fonce-bsc.bnb48.club`
 
 <summary>puissant-bsc, 適用於專業人員的群发交易服務</summary>
 
-`https://puissant-bsc.bnb48.club //mainnet`
-
-`https://testnet-puissant-bsc.bnb48.club // testnet`
+`https://puissant-bsc.bnb48.club`
 
 Puissant 服务可以一次接收一组tx，并在保持gasPrice優先排序的前提下，将一组tx按照原子操作打包。Puissant 天生是隐私服务。
 
 必須通過程序調用，不適用於普通錢包。
 
-接口規範參見[api-reference.md](api-reference.md "mention")
+接口規範參見
 
 </details>
