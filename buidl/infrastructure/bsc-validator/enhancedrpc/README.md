@@ -23,7 +23,18 @@ description: 'Foncé: [法文] 黑暗。 Puissant: [法文] 強力的。'
 
 即可以最低1gwei的优惠价格发送BSC交易！
 
-请注意最低1gwei的gasPrice是有条件的，所發送的交易gasLimit越多，要求持有KOGE数量越多(持有48er NFT者發出的交易不對gasLimit做限制)。
+请注意最低1gwei的gasPrice是有条件的，所發送的交易gasLimit越多，要求持有KOGE数量越多。持有一個48er NFT按照持有100萬KOGE享受優惠。
+
+```
+KOGE      可享1gwei的gasLimit上限
+<1        0
+1~10      240000
+100       480000
+1000      960000
+10000     1920000
+...
+//持有量每增加10倍，gasLimit翻倍
+```
 
 當您發送的交易超過您可以享受的優惠幅度，可以選擇提高gasPrice，或者持倉更多的KOGE。RPC服务会在报错信息中給出所能接受最低的gasPrice，通常參考重新设置后再发送交易即可。
 
