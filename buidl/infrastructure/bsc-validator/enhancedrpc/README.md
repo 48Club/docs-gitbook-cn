@@ -25,7 +25,7 @@ description: 'Foncé: [法文] 黑暗。 Puissant: [法文] 強力的。'
 
 请注意最低1gwei的gasPrice是有条件的，所發送的交易gasLimit越多，要求持有KOGE数量越多。
 
-KOGE持倉計算方法：
+KOGE持倉計算包括：
 
 1. 錢包中持有的KOGE
 2. 質押在[Broken link](broken-reference "mention")的KOGE
