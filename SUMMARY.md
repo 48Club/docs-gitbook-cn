@@ -13,9 +13,9 @@
     * [48er NFT](dao/governance/voting/48er-nft.md)
   * [理事會](dao/governance/li-shi-hui.md)
 * [會員資格](dao/membership/README.md)
-  * [鉑金會](dao/membership/bo-jin-hui/README.md)
-    * [域名郵箱](dao/membership/bo-jin-hui/yu-ming-you-xiang.md)
-    * [免費的翻墻服務](dao/membership/bo-jin-hui/mian-fei-de-fan-qiang-fu-wu.md)
+  * [鉑金會](dao/membership/platinum-benefit/README.md)
+    * [域名郵箱](dao/membership/platinum-benefit/domain-email.md)
+    * [免費的翻墻服務](dao/membership/platinum-benefit/free-vpn.md)
   * [周邊產品](dao/membership/merch.md)
 
 ## 俱樂部業務 <a href="#buidl" id="buidl"></a>
