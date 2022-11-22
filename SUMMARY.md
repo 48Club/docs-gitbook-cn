@@ -1,22 +1,17 @@
 # Table of contents
 
-## 參考資料 <a href="#reference" id="reference"></a>
-
-* [輕皮書](README.md)
-* [常見問題](reference/faq.md)
-
 ## DAO
 
+* [常見問題](README.md)
+* [KOGE 代幣](dao/kogetoken/README.md)
+  * [輕皮書](dao/kogetoken/readme.md)
+  * [鉑金會](dao/kogetoken/platinum-benefit/README.md)
+    * [域名郵箱](dao/kogetoken/platinum-benefit/domain-email.md)
+    * [免費的翻墻服務](dao/kogetoken/platinum-benefit/free-vpn.md)
 * [治理方式](dao/governance/README.md)
-  * [鏈上表決](dao/governance/voting/README.md)
-    * [KOGE 代幣](dao/governance/voting/kogetoken.md)
-    * [48er NFT](dao/governance/voting/48er-nft.md)
+  * [鏈上表決](dao/governance/voting.md)
+  * [48er NFT](dao/governance/48er-nft.md)
   * [理事會](dao/governance/li-shi-hui.md)
-* [會員資格](dao/membership/README.md)
-  * [鉑金會](dao/membership/platinum-benefit/README.md)
-    * [域名郵箱](dao/membership/platinum-benefit/domain-email.md)
-    * [免費的翻墻服務](dao/membership/platinum-benefit/free-vpn.md)
-  * [周邊產品](dao/membership/merch.md)
 
 ## 俱樂部業務 <a href="#buidl" id="buidl"></a>
 

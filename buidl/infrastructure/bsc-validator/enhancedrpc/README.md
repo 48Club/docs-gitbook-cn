@@ -18,7 +18,7 @@ description: 'Foncé: [法文] 黑暗。 Puissant: [法文] 強力的。'
 
 满足以下条件：&#x20;
 
-1. 发起交易的钱包地址持有至少1 KOGE余额(包括DAO合約質押部分以及[48er-nft.md](../../../../dao/governance/voting/48er-nft.md "mention"))。
+1. 发起交易的钱包地址持有至少1 KOGE余额(包括DAO合約質押部分以及[48er-nft.md](../../../../dao/governance/48er-nft.md "mention"))。
 2. 使用 RPC地址 [https://koge-rpc-bsc.bnb48.club](https://t.co/5859ob3MhI)&#x20;
 
 即可以最低1gwei的优惠价格发送BSC交易！
