@@ -6,6 +6,7 @@
 * [KOGE 代幣](dao/kogetoken/README.md)
   * [輕皮書](dao/kogetoken/readme.md)
   * [鉑金會](dao/kogetoken/platinum-benefit/README.md)
+    * [私密羣](dao/kogetoken/platinum-benefit/exclusive-chat.md)
     * [域名郵箱](dao/kogetoken/platinum-benefit/domain-email.md)
     * [免費的翻墻服務](dao/kogetoken/platinum-benefit/free-vpn.md)
 * [治理方式](dao/governance/README.md)
