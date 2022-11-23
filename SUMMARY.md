@@ -16,14 +16,13 @@
 
 ## 俱樂部業務 <a href="#buidl" id="buidl"></a>
 
-* [區塊鏈基礎設施](buidl/infrastructure/README.md)
+* [基礎設施](buidl/infrastructure/README.md)
   * [BSC 驗證節點](buidl/infrastructure/bsc-validator/README.md)
     * [進階RPC服務](buidl/infrastructure/bsc-validator/enhancedrpc/README.md)
       * [Puissant API](buidl/infrastructure/bsc-validator/enhancedrpc/api-reference.md)
       * [Puissant SDK](buidl/infrastructure/bsc-validator/enhancedrpc/puissant-sdk.md)
   * [BSC 節點快照](buidl/infrastructure/bsc-snapshots.md)
-  * [測試網BNB](buidl/infrastructure/test-bnb-faucet.md)
-  * [Kava 驗證節點](buidl/infrastructure/kava-validator.md)
+  * [測試網BNB Faucet](buidl/infrastructure/test-bnb-faucet.md)
 * [48 Grant](buidl/48-grant/README.md)
   * [研究與評級](buidl/48-grant/research-rating.md)
   * [持倉](buidl/48-grant/portfolio.md)
