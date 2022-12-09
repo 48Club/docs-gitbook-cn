@@ -25,14 +25,16 @@ description: 'Puissant: [法文] 強力的。'
 
 请注意最低1gwei的gasPrice是有条件的，所發送的交易gasLimit越多，要求持有KOGE数量越多。
 
-KOGE持倉计算以下三部分之和：
+KOGE有效持倉计算以下三部分之和：
 
 1. 錢包中持有的KOGE，超过10 KOGE按10 KOGE计算。
 2. 質押在[Broken link](broken-reference "mention")的KOGE
 3. 每持有一個48er NFT視爲持有100萬KOGE
 
 ```
-KOGE      可享1gwei的gasLimit上限
+KOGE有效持仓 = (Koge余额，最大10 Koge) + DAO质押中Koge + 48erNFT数量 * 1,000,000
+
+KOGE有效持仓   可享1gwei的gasLimit上限
 <1        0
 1~10      240000
 100       480000
