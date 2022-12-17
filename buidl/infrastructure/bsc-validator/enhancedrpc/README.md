@@ -28,7 +28,7 @@ description: 'Puissant: [法文] 強力的。'
 KOGE有效持倉计算以下三部分之和：
 
 1. 錢包中持有的KOGE，超过10 KOGE按10 KOGE计算。
-2. 質押在[Broken link](broken-reference "mention")的KOGE
+2. 質押在[DAO](https://www.bnb48.club/staking)的KOGE
 3. 每持有一個48er NFT視爲持有100萬KOGE
 
 ```
