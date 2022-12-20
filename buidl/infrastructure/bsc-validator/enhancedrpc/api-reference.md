@@ -4,7 +4,7 @@ description: 按照標準RPC接口風格設計
 
 # Puissant API
 
-{% swagger method="post" path="/" baseUrl="https://puissant-bsc.bnb48.club" summary="查詢最低GasPrice要求" %}
+{% swagger method="post" path="/" baseUrl="https://puissant-bsc.48.club" summary="查詢最低GasPrice要求" %}
 {% swagger-description %}
 Override of original eth\_gasPrice endpoint.
 
@@ -40,7 +40,7 @@ Override of original eth\_gasPrice endpoint.
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger method="post" path="/" baseUrl="https://puissant-bsc.bnb48.club" summary="發送隱私交易" %}
+{% swagger method="post" path="/" baseUrl="https://puissant-bsc.48.club" summary="發送隱私交易" %}
 {% swagger-description %}
 提交隱私交易。
 
@@ -88,7 +88,7 @@ Signed transaction (eth_sendRawTransaction style, signed and RLP-encoded)
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger method="post" path="/" baseUrl="https://puissant-bsc.bnb48.club" summary="發送Puissant" %}
+{% swagger method="post" path="/" baseUrl="https://puissant-bsc.48.club" summary="發送Puissant" %}
 {% swagger-description %}
 一次發送一組tx，即Puissant。
 
@@ -110,9 +110,7 @@ Puissant中的tx必須按照gasPrice降序排列。Puissant中首個tx的gasPric
 
 **CASE BEATEN**
 
-多个Puissant包含同个tx时，优先服务首个tx gasPrice最高的puissant，其他puissant竞价失败。
-
-
+多个Puissant包含同个tx时，优先服务首个tx gasPrice最高的puissant，若打包被完全接受(无revert等)，则其他puissant竞价失败。
 
 puissant中gasPrice完全一致的tx，打包时会按顺序在区块中连续的位置。gasPrice不同的tx则不保证。
 
@@ -171,7 +169,7 @@ Puissant 有效時間，過期後將不被打包. 需在請求時間兩分鐘內
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger method="get" path="/api/v1/ping" baseUrl="https://explorer.bnb48.club" summary="查詢 puissant api 在綫狀態" %}
+{% swagger method="get" path="/api/v1/ping" baseUrl="https://explorer.48.club" summary="查詢 puissant api 在綫狀態" %}
 {% swagger-description %}
 
 {% endswagger-description %}
@@ -186,7 +184,7 @@ Puissant 有效時間，過期後將不被打包. 需在請求時間兩分鐘內
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger method="get" path="/api/v1/puissant/:uuid" baseUrl="https://explorer.bnb48.club" summary="查詢 puissant 交易狀態" %}
+{% swagger method="get" path="/api/v1/puissant/:uuid" baseUrl="https://explorer.48.club" summary="查詢 puissant 交易狀態" %}
 {% swagger-description %}
 
 {% endswagger-description %}

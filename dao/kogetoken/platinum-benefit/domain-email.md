@@ -1,8 +1,8 @@
 # 域名郵箱
 
-擁有你的 _**username**_**@bnb48.club** 郵箱
+擁有你的 _**username**_**@48.club** 郵箱
 
-發Email到 [domain\_email@bnb48.club](mailto:domain\_email@bnb48.club) 並提供以下信息：
+發Email到 [domain\_email@48.club](mailto:domain\_email@bnb48.club) 並提供以下信息：
 
 1. 姓/名 (系統必填項，無須提供真實姓名)
 2. 希望的Email 用戶名 （可提供多個備選）

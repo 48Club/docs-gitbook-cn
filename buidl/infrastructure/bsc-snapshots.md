@@ -4,4 +4,4 @@
 
 在常見的1G網絡帶寬下，下載我們的快照解壓並開始運行節點程序直至追上最新區塊，全過程可以在2-3小時以內完成。
 
-[BNB48 BSC Snapshots](https://github.com/BNB48Club/bsc-snapshots)
+[48Club BSC Snapshots](https://github.com/48Club/bsc-snapshots)

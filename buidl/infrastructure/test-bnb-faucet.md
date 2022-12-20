@@ -1,6 +1,6 @@
-# 測試網BNB
+# 測試網BNB Faucet
 
-出於扶持BSC生態的目的，我們向由於產品測試目的需要測試網BNB的項目方提供測試幣，請發送郵件到[testfaucet@bnb48.club](mailto:testfaucet@bnb48.club) 附上:
+出於扶持BSC生態的目的，我們向由於產品測試目的需要測試網BNB的項目方提供測試幣，請發送郵件到[testfaucet@48.club](mailto:testfaucet@bnb48.club) 附上:
 
 1. 項目簡介。
 2. 測試計劃。

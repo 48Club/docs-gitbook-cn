@@ -4,9 +4,9 @@ description: 'Puissant: [法文] 強力的。'
 
 # 進階RPC服務
 
-下列RPC服务实现了不同的高级功能，由BNB48验证节点以及合作的其他验证节点共同提供服务。同样全部以隐私模式处理。
+下列RPC服务实现了不同的高级功能，由48Club验证节点以及合作的其他验证节点共同提供服务。同样全部以隐私模式处理。
 
-反馈问题请到[github](https://github.com/BNB48Club/enhanced\_rpc) ，验证节点商谈合作事宜请联系 _rpc@bnb48.club_
+反馈问题请到[github](https://github.com/BNB48Club/enhanced\_rpc) ，验证节点商谈合作事宜请联系 _rpc@48.club_
 
 本服务为链下服务，不主动隐藏用户访问记录（包括但不限于IP地址）。
 
@@ -46,7 +46,7 @@ KOGE有效持仓   可享1gwei的gasLimit上限
 
 當您發送的交易超過您可以享受的優惠幅度，可以選擇提高gasPrice，或者持倉更多的KOGE。RPC服务会在报错信息中給出所能接受最低的gasPrice，通常參考重新设置后再发送交易即可。
 
-由於並非所有的验证节点都接收低于5gwei的交易（BNB48及合作伙伴支持），所以较低gas的交易打包可能会稍慢，这是正常现象。
+由於並非所有的验证节点都接收低于5gwei的交易（48Club及合作伙伴支持），所以较低gas的交易打包可能会稍慢，这是正常现象。
 
 </details>
 
@@ -54,7 +54,7 @@ KOGE有效持仓   可享1gwei的gasLimit上限
 
 <summary>puissant-bsc, 適用於專業人員的群发交易服務</summary>
 
-`https://puissant-bsc.bnb48.club`
+`https://puissant-bsc.48.club`
 
 Puissant 服务可以一次接收一组tx，并在保持gasPrice優先排序的前提下，将一组tx按照原子操作打包。Puissant 天生是隐私服务。
 
